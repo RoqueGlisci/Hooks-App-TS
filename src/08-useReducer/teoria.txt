@@ -1,0 +1,43 @@
+---Reducer---
+1- Es una funcion comun
+2- Debe de ser una funcion pura:
+    -no debe de tener efectos secundarios(tiene que resolverlo sin necesidad de llamar a ortas funciones)
+    -no debe de realizar tareas asincronas(tienen que ejecutarce de manera sincrona)
+    -deve de retornar siempre un estado nuevo
+    - no deve de llamar al localStorage o sessionStorage(son considerados efectos secundario)
+    -No debe de requerir mas que una accion que puede tener un argumento (para modifucar el state no debe requerir mas de una accion)
+3- Debe de retornar un nuevo estado
+4- Usualmente solo recibe dos argumento: el valor inicial y la accion a ejecutar
+
+Ejemplo:
+tener el contro en un solo lugar todas las acciones que modifican el estado de la aplicacion
+const initialTodos = [{
+    id:1,
+    todo:'Comprar pan',
+    done: false
+}]
+
+const todoReducer = (state = initialTodos, action) => {
+
+    return state;
+}
+
+let todos = todoReducer();
+console.log(todos)
+
+
+
+--- prop ---
+Prop: es un mecanismo para pasar datos de un componente padre a un componente hijo. 
+Las props son inmutables, lo que significa que no se pueden modificar dentro del componente que las recibe
+
+function Person(props) {
+  return <div>¡Hola, {props.name}!</div>;
+}//otra forma
+
+funcion Person({name}){
+    return <div>¡Hola, {name}!</div>;
+}
+
+// Uso del componente Person con la prop 'name'
+<Person name="John" />

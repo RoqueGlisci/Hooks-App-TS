@@ -1,0 +1,5 @@
+
+Ctrl + Shift + L. selccionar y modifica todas las palabras del mismo nombre
+
+--- instalacion de react router https://reactrouter.com/en/main---
+yarn add react-router-dom

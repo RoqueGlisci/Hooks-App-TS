@@ -1,0 +1,19 @@
+--- memo y useMemo ---
+- memo() es una función de React que se utiliza para optimizar el rendimiento de los componentes funcionales. 
+Cuando un componente se envuelve en memo(), React lo memoriza y solo lo vuelve a renderizar si sus propiedades han cambiado.
+
+- React.useMemo() es un gancho de React que se utiliza para memorizar el resultado de una función costosa en términos de rendimiento. 
+Cuando una función se envuelve en React.useMemo(), React la memoriza y solo la vuelve a ejecutar si sus dependencias han cambiado.
+
+- La principal diferencia entre React.memo() y React.useMemo() es que React.memo() se utiliza para memorizar componentes funcionales completos, 
+mientras que React.useMemo() se utiliza para memorizar el resultado de una función costosa en términos de rendimiento.
+
+Cuando un componente se envuelve en React.memo(), React lo memoriza y solo lo vuelve a renderizar si sus propiedades han cambiado. 
+Por otro lado, cuando una función se envuelve en React.useMemo(), React la memoriza y solo la vuelve a ejecutar si sus dependencias han cambiado
+
+
+--- useCallback ---
+useCallback es un Hook de React que te permite almacenar la definición de una función entre renderizados subsecuentes. 
+Esto puede ser útil para evitar que se vuelva a crear la función cada vez que se renderiza el componente1.
+En resumen, useCallback es un hook que se utiliza para optimizar el rendimiento de los componentes de React al evitar la creación innecesaria de funciones2.
+

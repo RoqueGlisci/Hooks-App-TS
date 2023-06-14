@@ -1,0 +1,47 @@
+---jest typescript react---
+
+para ejecutar el test -> yarn test
+
+https://juandavid8a.github.io/tutoriales/2023/01/21/vite-jest-typescript-app/
+
+https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177
+
+https://www.youtube.com/watch?v=62yuvCMZHco&ab_channel=JuanDavidOchoa
+
+
+--- comandos ---
+- yarn add --dev jest babel-jest @babel/preset-env @babel/preset-react 
+
+- yarn add --dev @testing-library/react @testing-library/dom @testing-library/user-event @types/jest jest-environment-jsdom
+
+- yarn add --save-dev @babel/core @babel/preset-typescript
+
+- se instala si se trabaja con fetch: yarn add --dev whatwg-fetch
+
+
+- pegar en page .json: "scripts: {
+                        ...
+                        "test": "jest --watchAll"}
+- se borra el "type": "module"
+
+
+- Crear la configuración de babel babel.config.js : 
+module.exports = {
+    presets: [
+        [ '@babel/preset-env', { targets: { esmodules: true } } ],
+        [ '@babel/preset-react', { runtime: 'automatic' } ],
+        '@babel/preset-typescript',
+    ],
+};
+
+
+crear Jest config y setup: jest.config.js
+module.exports = {
+    testEnvironment: 'jest-environment-jsdom',
+    setupFiles: ['./jest.setup.js'],
+   
+}
+
+- cuando se usa el fech: jest.setup.js
+En caso de necesitar la implementación del FetchAPI:
+import 'whatwg-fetch';
